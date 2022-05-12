@@ -32,8 +32,8 @@ int main(int argc, char *argv[])
 	while ((read = getline(&line, &length, file_desc)) != -1)
 	{
 		token = strtok(line, "\n\t $");
-		if (token[0] == '#')
-			continue;
+		/*if (token[0] == '#')*/
+			/*continue;*/
 		struc->argument = strtok(NULL, "\n\t $");
 		struc->line = line;
 		if (token != NULL)
