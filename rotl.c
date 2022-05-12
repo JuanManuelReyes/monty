@@ -6,7 +6,7 @@
  * @line_number: Number of the Line.
  * Return: Void.
  **/
-void _swap(stack_t **stack, unsigned int line_number)
+void _rotl(stack_t **stack, unsigned int line_number)
 {
 	stack_t *aux = *stack;
 
@@ -26,3 +26,5 @@ void _swap(stack_t **stack, unsigned int line_number)
 		*stack = (*stack)->next;
 		aux->next->next = NULL;
 	}
+}
+
