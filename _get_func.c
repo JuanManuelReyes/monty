@@ -25,6 +25,7 @@ stack_t *get_op_func(stack_t **stack, char *op_code, unsigned int line_number)
 		{"mod", _mod},
 		{"pchar", _pchar},
 		{"pstr", _pstr},
+		{"rotl", _rotl},
 		{NULL, NULL}
 	};
 	while (functions[i].opcode != NULL)
@@ -36,7 +37,7 @@ stack_t *get_op_func(stack_t **stack, char *op_code, unsigned int line_number)
 		}
 		i++;
 	}
-	if (i == 13)/*Is the {NULL, NULL} position*/
+	if (i == 14)/*Is the {NULL, NULL} position*/
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, op_code);
 		if (stack != NULL)
