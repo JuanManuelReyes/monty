@@ -1,31 +1,31 @@
 #include "monty.h"
 
 /**
- * _pchar - Prints the char at the top of the stack, followed by a new line.
+ * _pstr - Prints the the string that starts at the top of the stack.
  * @stack: Pointer to the beginning of the Linked List.
  * @line_number: Number of the Line.
  * Return: Void.
  **/
 void _pstr(stack_t **stack, unsigned int line_number)
 {
-        (void)line_number;
+	(void)line_number;
 
 	if (*stack == NULL || stack == NULL)
 	{
-                printf("\n");
+		printf("\n");
 		return;
-        }
-        else
-        {
-                while (*stack != NULL && (*stack)->n != 0)
-                {
-                        if ((*stack)->n >= 1 && (*stack)->n <= 127)
-		                printf("%c\n", (*stack)->n);
-                        else
-                                break;
-                        
-                        *stack = (*stack)->next;
-                }
-                printf("\n");
-        }
+	}
+	else
+	{
+		while (*stack != NULL && (*stack)->n != 0)
+		{
+			if ((*stack)->n >= 1 && (*stack)->n <= 127)
+				printf("%c\n", (*stack)->n);
+			else
+				break;
+
+			*stack = (*stack)->next;
+		}
+		printf("\n");
+	}
 }
