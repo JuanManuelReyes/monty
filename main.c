@@ -39,7 +39,8 @@ int main(int argc, char *argv[])
 		struc->line = line;
 		if (token == NULL || token[0] == '#')
 			continue;
-		stack = get_op_func(&stack, token, line_number);
+		if (token != NULL)
+			stack = get_op_func(&stack, token, line_number);
 		line_number++;
 	}
 	fclose(file_desc);
