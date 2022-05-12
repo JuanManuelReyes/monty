@@ -37,7 +37,6 @@ int main(int argc, char *argv[])
 		token = strtok(line, "\n\t $");
 		struc->argument = strtok(NULL, "\n\t $");
 		struc->line = line;
-		/*if (token == NULL || token[0] == '#')continue;*/
 		if (token != NULL)
 			stack = get_op_func(&stack, token, line_number);
 		line_number++;
