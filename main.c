@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	{
 		token = strtok(line, "\n\t $");
 		if (token[0] == '#')
-			break;
+			continue;;
 		struc->argument = strtok(NULL, "\n\t $");
 		struc->line = line;
 		if (token != NULL)
