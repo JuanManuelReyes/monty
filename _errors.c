@@ -43,6 +43,6 @@ void _errors(int flag, unsigned int line_number, stack_t **stack)
 	else if (flag == 16)
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
 	_free(stack, 1);
-	exit(EXIT_FAILURE); 
+	exit(EXIT_FAILURE);
 }
 
