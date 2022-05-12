@@ -72,7 +72,7 @@ void _mul(stack_t **stack, unsigned int line_number);
 void _mod(stack_t **stack, unsigned int line_number);
 void _pchar(stack_t **stack, unsigned int line_number);
 void _pstr(stack_t **stack, unsigned int __attribute__((unused)) line_number);
-void _swap(stack_t **stack, unsigned int line_number);
+void _rotl(stack_t **stack, unsigned int line_number);
 
 /*Extra Prototypes*/
 void _free(stack_t **stack, int flag);
