@@ -15,16 +15,16 @@ void _push(stack_t **stack, unsigned int line_number)
 	if (checker == 0)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
-		free(stack, 1);
-		exit(EXIT_FAILURE)
+		_free(stack, 1);
+		exit(EXIT_FAILURE);
 	}
 
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
-		free(stack, 1);
-		exit(EXIT_FAILURE)
+		_free(stack, 1);
+		exit(EXIT_FAILURE);
 	}
 
 	new_node->next = NULL;
