@@ -6,9 +6,11 @@
  * @line_number: Number of the Line.
  * Return: Void.
  **/
-void _pstr(stack_t **stack, unsigned int __attribute__((unused)) line_number)
+void _pstr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *aux = *stack;
+
+	(void)line_number;
 
 	if (*stack == NULL || stack == NULL)
 	{
