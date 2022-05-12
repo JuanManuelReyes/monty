@@ -8,8 +8,6 @@
  **/
 void _pstr(stack_t **stack, unsigned int __attribute__((unused)) line_number)
 {
-	(void)line_number;
-
 	stack_t *aux = *stack;
 
 	if (*stack == NULL || stack == NULL || aux == NULL)
