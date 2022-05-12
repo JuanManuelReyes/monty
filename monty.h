@@ -74,7 +74,6 @@ void _pchar(stack_t **stack, unsigned int line_number);
 
 /*Extra Prototypes*/
 void _free(stack_t **stack, int flag);
-void _errors(int flag, unsigned int line_number, stack_t **stack);
 int _check_num(unsigned int line_number, stack_t **stack);
 stack_t *get_op_func(stack_t **stack, char *op_code, unsigned int line_number);
 
