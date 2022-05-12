@@ -21,7 +21,7 @@ void _pstr(stack_t **stack, unsigned int line_number)
 	{
 		while (aux != NULL && aux->n != 0)
 		{
-			if (aux->n >= 1 && aux->n <= 128)
+			if (aux->n >= 1 && aux->n <= 127)
 				printf("%c", aux->n);
 			else
 				break;
