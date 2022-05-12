@@ -17,10 +17,13 @@ int main(int argc, char *argv[])
 	stack_t *stack = NULL;
 
 	if (argc != 2)
-		_errors(1, line_number, &stack);
+	{
+		fprintf(stderr, "USAGE: monty file\n");
+		exit(EXIT_FAILURE);
+	}
 	name = argv[1];
 	file_desc = fopen(argv[1], "r");
-	if (file_desc == NULL)/*ERROR case 2*/
+	if (file_desc == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", name);
 		exit(EXIT_FAILURE);

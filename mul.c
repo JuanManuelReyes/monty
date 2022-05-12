@@ -11,7 +11,11 @@ void _mul(stack_t **stack, unsigned int line_number)
 	stack_t *aux = NULL;
 
 	if (*stack == NULL || (*stack)->next == NULL)
-		_errors(13, line_number, stack);
+	{
+		fprintf(stderr, "L%d: can't mul, stack too short\n", line_number);
+		free(stack, 1);
+		exit(EXIT_FAILURE);
+	}
 	else
 	{
 		aux = (*stack)->next;

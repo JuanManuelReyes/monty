@@ -35,7 +35,7 @@ stack_t *get_op_func(stack_t **stack, char *op_code, unsigned int line_number)
 		}
 		i++;
 	}
-	if (i == 12)/*Is the {NULL, NULL} position, ERROR case 3*/
+	if (i == 12)/*Is the {NULL, NULL} position*/
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, op_code);
 		if (stack != NULL)

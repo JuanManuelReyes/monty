@@ -11,11 +11,19 @@ void _mod(stack_t **stack, unsigned int line_number)
 	stack_t *aux = NULL;
 
 	if (*stack == NULL || (*stack)->next == NULL)
-		_errors(14, line_number, stack);
+	{
+		fprintf(stderr, "L%d: can't mod, stack too short\n", line_number);
+		free(stack, 1);
+		exit(EXIT_FAILURE);
+	}
 	else
 	{
 		if ((*stack)->n == 0)
-			_errors(12, line_number, stack);
+		{
+			fprintf(stderr, "L%d: division by zero\n", line_number);
+			free(stack, 1);
+			exit(EXIT_FAILURE);
+		}
 
 		aux = (*stack)->next;
 		aux->n = aux->n % (*stack)->n;

@@ -13,11 +13,19 @@ void _push(stack_t **stack, unsigned int line_number)
 	line_number += 0;
 	checker = _check_num(line_number, stack);/*0 if is not a num, else 1*/
 	if (checker == 0)
-		_errors(5, line_number, stack);
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		free(stack, 1);
+		exit(EXIT_FAILURE)
+	}
 
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
-		_errors(4, line_number, stack);
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		free(stack, 1);
+		exit(EXIT_FAILURE)
+	}
 
 	new_node->next = NULL;
 	new_node->prev = NULL;

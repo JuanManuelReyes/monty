@@ -11,7 +11,11 @@ int _check_num(unsigned int line_number, stack_t **stack)
 	int i = 0;
 
 	if (struc->argument == NULL)
-		_errors(5, line_number, stack);
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		_free(stack, 1);
+		exit(EXIT_FAILURE);
+	}
 
 	while (struc->argument[i] != '\0')
 	{	/*Cheking if it'struc a letter and not equal to <->*/
