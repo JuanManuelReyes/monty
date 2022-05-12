@@ -16,7 +16,7 @@ void _rotl(stack_t **stack, unsigned int line_number)
 	if ((*stack)->next != NULL)
 	{
 		aux = *stack;
-		
+
 		while (aux->next != NULL)
 			aux = aux->next;
 
