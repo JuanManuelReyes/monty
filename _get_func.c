@@ -43,7 +43,6 @@ stack_t *get_op_func(stack_t **stack, char *op_code, unsigned int line_number)
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, op_code);
 		if (stack != NULL)
 			_free(stack, 0);
-
 		free(struc->line);
 		fclose(struc->file_desc);
 		free(struc);
